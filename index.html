@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Challenge | Juego Ahorcado</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Externa - Inter - Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container-logo">
+            <h1><a href="index.html"><img class="logo" src="img/Logo.png" alt="Logo de Alura"></a></h1>
+        </div>
+    </header>
+    <main class="container">
+        <section class="container-btn">
+            <button class="btn-iniciar" type="button" onclick="iniciarJuego()">Iniciar Juego</button>
+            <button class="btn-agregar" type="button" onclick="agregarPalabra()">Agregar nueva palabra</button>
+        </section>
+        <section class="container-inicioJuego">
+            <canvas class="canvas" width="668" height="300"></canvas>
+            <ul class="cajaLetras1"> 
+                <!-- <li class="letra">P</li>                 -->
+            </ul>
+            <ul class="cajaLetras2">
+                <!-- <li class="guionBajo"></li> -->
+            </ul>
+            <ul class="cajaNo-es"> 
+                <li class="no-es"></li>
+            </ul>
+            <button class="btn-nuevoJuego" type="button" onclick="botonNuevo()">Nuevo Juego</button>
+            <button class="btn-desistir" type="button" onclick="botonDisistir()">Desistir</button>
+        </section>
+        <section class="container-agregarPalabra">
+            <textarea class="texto" name="texto" id="texto" cols="30" rows="10" placeholder="Ingrese una palabra" maxlength="8" onkeyup="this.value=NumText(this.value)"></textarea>
+            <div class="aviso">
+                <img src="img/Vector.png" alt="Signo de Admiración"> Máximo de 8 letras
+            </div>
+            <button class="btnGuardar" type="button" onclick="guardar()">Guardar y empezar</button>
+            <button class="btnCancelar" type="button" onclick="botonCancelar()">Cancelar</button>
+        </section>
+    </main>
+    <footer>
+        <div class="container-footer">
+            <p>Hecho por <span><b>Luis Felipe Ramos</b> / Mexicano / luisfediana@gmail.com / 2022</span></p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/funciones-canvas.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.35/dist/sweetalert2.all.min.js"></script>
+</body>
+
+</html>
+
+<!-- <canvas width="600" height="400"> </canvas> -->
