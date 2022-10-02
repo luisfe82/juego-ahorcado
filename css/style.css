@@ -1,0 +1,309 @@
+body {
+    background-color: #E5E5E5;
+    box-sizing: border-box;
+}
+
+/*?------------------------------- Header */
+header {
+    padding: 40px 0 0 40px;
+}
+
+.container-logo {
+    width: 120px;
+    height: 48px;
+}
+
+/*?------------------------------ Main  */
+button,
+.texto,
+.aviso,
+.letra,
+.no-es,
+.btn-nuevoJuego,
+.btn-desistir{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+}
+
+button {
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+
+/*?----------------------------- Inicio Botones de Inicio */
+.container {
+    
+    padding: 0 0;
+    width: 80%;
+    height: 78vh;
+    margin: 0 auto;
+    /* background: yellow; */
+}
+
+.container-btn {
+    
+    display: block;
+    /* background: blue; */
+    padding: 9em 0;
+    margin: 0 auto;
+    height: 100%;
+    width: 30vw;
+    text-align: center;
+}
+
+.btn-iniciar {
+    background: #0A3871;
+    border-radius: 24px;
+    border: none;
+    width: 317px;
+    height: 114px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    transition: all 1s;
+}
+
+.btn-iniciar:hover {
+    background: #d3f802;
+    color: #000000;
+}
+
+.btn-agregar {
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    width: 280px;
+    height: 67px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0A3871;
+    transition: all 1s;
+}
+
+.btn-agregar:hover {
+    background: #01422f;
+    color: #fffafa;
+}
+/*?----------------------------- Inicio de Juego */
+.container-inicioJuego {
+    
+    display: block;
+    /* background: rgb(3, 255, 255); */
+    margin: 0 auto;
+    height: 100%;
+    width: 668px;
+    text-align: center;
+}
+.canvas{
+    background:#E5E5E5;
+}
+.cajaLetras1{
+    display:flex;
+    margin: 2px 0;
+    padding: 0 2px;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.cajaLetras2{
+    display:flex;
+    margin: 2px 0;
+    padding: 0 2px;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.letra{
+    /* background:#ffffff; */
+    color:#0A3871;
+    width:60px;
+    height:50px;
+    font-size: 48px;
+}
+
+.guionBajo{
+    width: 60px;
+    height: 4px;
+    background: #0A3871;
+    border-radius: 8px;
+}
+
+.cajaNo-es{
+    display:flex;
+    margin: 2px 0;
+    padding: 0 2px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-size: 24px;
+}
+.no-es{
+    color:#0A3871;
+    width: 16px;
+    height: 36px;
+    line-height: 140%;
+    margin: 0 9px;
+}
+
+.container-inicioJuego > button{
+    width: 332px;
+    height: 67px;
+    border-radius: 24px;
+}
+
+.btn-nuevoJuego{
+    background: #0A3871;
+    color:#FFFFFF;
+    font-size: 16px;
+    line-height: 19px;
+    transition: all 1s;
+}
+.btn-nuevoJuego:hover{
+    background: #4f9bf8;
+    color:#000000;
+}
+
+.btn-desistir{
+    color:#0A3871;
+    font-size: 16px;
+    line-height: 19px;
+    transition: all 1s;
+}
+
+.btn-desistir:hover{
+    background: #f30404;
+    color:#e4fd04;
+}
+
+
+
+/*?---------------------------- Inicio de Agregar Palabra  */
+
+.container-agregarPalabra {
+    
+    display: block;
+    /* background: rgb(3, 255, 255); */
+    padding: 5em 0;
+    margin: 0 auto;
+    height: 100%;
+    width: 668px;
+    text-align: start;
+}
+
+.container-agregarPalabra > button{
+    width: 332px;
+    height: 67px;
+    border-radius: 24px;
+}
+
+.texto {
+    border: none;
+    resize: none;
+    outline: none;
+    background-color: #E5E5E5;
+    font-size: 32px;
+    line-height: 82%;
+    color: #0A3871;
+}
+
+.aviso {
+    font-size: 12px;
+    color: #495057;
+    opacity: 0.8;
+}
+
+.btnGuardar{
+    background: #0A3871;
+    border: none;
+    color: #FFFFFF;
+    transition: all 1s;
+}
+
+.btnGuardar:hover{
+    background: #00fd0d;
+    color: #fdfbfb;
+}
+
+.btnCancelar{
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    transition: all 1s;
+}
+.btnCancelar:hover{
+    border: none;
+    background: #ff0000f3;
+    color: #ffffff;
+}
+
+/*?-------------------------------------Inicio Medias Query  */
+
+@media screen and (max-width: 428px) {
+    header {
+        padding: 24px 0 0 16px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .container-btn {
+        width: 100%;        
+    }
+    
+    .container-agregarPalabra{
+        width: 90%;
+        text-align:center;
+    }
+
+    .texto{
+        line-height: 64%;
+    }
+
+    .container-inicioJuego{
+        width: 100%;     
+    }
+    canvas{
+        height:50%;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 884px) and (min-width: 429px) {
+    header {
+        padding: 74px 0 0 40px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .container-btn {        
+        height: 100%;
+        width: 60%;
+        padding: 18em 0;
+    }
+    
+    .texto{
+        line-height: 160%;
+    }
+
+    canvas{
+        margin: 6em 0 3em 0;
+      
+    }
+
+}
+
+
+/*?---------------------------------------------- Inicia  Footer  */
+
+.container-footer {
+    background: rgba(7, 3, 73, 0.9) url("../img/pattern.png") repeat;
+    text-align: center;
+    height: 60px;
+    padding-top: 1em;
+}
+
+.container-footer p {
+    color: #E5E5E5;
+}
